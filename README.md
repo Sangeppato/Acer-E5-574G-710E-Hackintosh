@@ -46,7 +46,7 @@ If you prefer, instead of changing permissions and ownership + rebuilding the ca
 All the kexts which I've installed in `/Library/Extensions` can be found in the Kexts folder.
 The only ones which are not covered by the little "guide" below are: `WhateverGreen.kext`, `FakeSMC.kext` (and its Plugins) and `USBInjectAll.kext`. You should install those too.
 
-You can see my patcher SSDT and my config.plist as well, in the `CLOVER` folder.
+You can see my patched SSDTs and my `config.plist` as well, in the `CLOVER` folder.
 
 ### Audio
 To get audio working, the best way is probably to use AppleALC (VoodooHDA works as well), or at least this is what I use.
