@@ -43,8 +43,10 @@ After that, rebuilt the kext cache:
 If you prefer, instead of changing permissions and ownership + rebuilding the cache in the terminal, you can just run Kext Utility and enter your password, it will do everything for you (just wait for the "Quit" button to appear, it means that the process is complete).
 
 ## Specific components 
-All the kexts which I've installed in /library/Extensions can be found in the Kexts folder.
+All the kexts which I've installed in `/Library/Extensions` can be found in the Kexts folder.
 The only ones which are not covered by the little "guide" below are: `WhateverGreen.kext`, `FakeSMC.kext` (and its Plugins) and `USBInjectAll.kext`. You should install these too.
+
+You can see my patcher SSDT and my config.plist as well, in the `CLOVER` folder.
 
 ### Audio
 To get audio working, the best way is probably to use AppleALC (VoodooHDA works as well), or at least this is what I use.
