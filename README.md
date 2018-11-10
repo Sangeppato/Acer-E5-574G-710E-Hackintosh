@@ -44,7 +44,7 @@ If you prefer, instead of changing permissions and ownership + rebuilding the ca
 
 ## Specific components 
 All the kexts which I've installed in /library/Extensions can be found in the Kexts folder.
-The only ones which are not covered by the little "guide" below are: `WhateverGreen.kext`, `FakeSMC.kext` and `USBInjectAll.kext`.
+The only ones which are not covered by the little "guide" below are: `WhateverGreen.kext`, `FakeSMC.kext` (and its Plugins) and `USBInjectAll.kext`. You should install these too.
 
 ### Audio
 To get audio working, the best way is probably to use AppleALC (VoodooHDA works as well), or at least this is what I use.
