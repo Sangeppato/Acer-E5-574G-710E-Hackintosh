@@ -15,10 +15,14 @@ You should follow [RehabMan's great guide](https://www.tonymacx86.com/threads/gu
 For the config.plist file, you should choose "config_HD515_520_530_540.plist".
 
 ### Software you will need
-* [MaciASL]
-* [Kext Utility]
-* [IASL]
+* [MaciASL](https://github.com/RehabMan/OS-X-MaciASL-patchmatic)
+* [Kext Utility](https://mac.softpedia.com/get/System-Utilities/Kext-Utility.shtml)
+* [IASL](https://bitbucket.org/RehabMan/acpica/downloads/): After unzipping the file, you may want to copy the binary to your path:
+    ```
+    sudo cp /path/to/iasl /usr/bin/
+    ```
 * [Clover Configurator] (this is what I use, but you can just choose a plist editor)
+[Clover Configurator]: https://mackie100projects.altervista.org/download-clover-configurator/
 
 ### Kext installation
 Kext are kernel extensions in macOS and they are required to get components working properly.
@@ -38,7 +42,17 @@ If you prefer, instead of changing permissions and ownership + rebuilding the ca
 ### Audio
 To get audio working, the best way is probably to use AppleALC (VoodooHDA works as well), or at least this is what I use.
 Install [Lilu] and [AppleALC] kexts and open your `config.plist` file in `/EFI/CLOVER` with Clover Configurator.
-In the "Devices" section set "Inject Audio" to 'No' and in "Properties" look for `#layout-id` in the properties keys, then remove the hash character ('#') in it.
+In the "Devices" section set "Inject Audio" to 'No' and in "Properties" look for `#layout-id` in the properties keys, then remove the hash character ('#') from it.
 
 [Lilu]: https://github.com/acidanthera/Lilu
 [AppleALC]: https://github.com/acidanthera/AppleALC
+
+### Battery
+Download the latest Kext from [Here](https://github.com/RehabMan/OS-X-ACPI-Battery-Driver), it should just work.
+More info [here](https://www.tonymacx86.com/threads/guide-how-to-patch-dsdt-for-working-battery-status.116102/).
+
+### Display brightness control
+Download the latest zip file from [Here](https://bitbucket.org/RehabMan/applebacklightfixup/downloads/). Inside it you will find a kext and a file called "SSDT-PNLF.aml": you have to copy it to `EFI/CLOVER/ACPI/patched`, while you should already know what to do with the kext.
+
+NOTE: This with just allow you to change the brightness in Settings->Display, setting the keyboard shortcuts is a different story.
+More info [here](https://www.tonymacx86.com/threads/guide-laptop-backlight-control-using-applebacklightfixup-kext.218222/).
