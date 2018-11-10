@@ -1,5 +1,13 @@
 # Acer-E5-574G-710E-Hackintosh
 The Laptop works fairly well with macOS Mojave 10.14.1, I still have to get the touchpad working with VoodooI2C (I'm using ApplePS2SmartTouchpad right now) and to replace the Wifi card with a Broadcom BCM94352Z.
+
+### Specs
+* Intel i7-6500u CPU
+* 8 Gb DDR3 Ram
+* Nvidia GT920M
+* ELAN 0501 Touchpad (I2C, but PS2 Keyboard)
+* Realtek ALC255 Audio Codec
+
 ### What works
 * All the basic components work without issues (CPU, RAM, Intel GPU, Display)
 * Display brightness
@@ -9,6 +17,10 @@ The Laptop works fairly well with macOS Mojave 10.14.1, I still have to get the 
 * HDMI, even with the GT920M disabled
 * Audio
 * Suspension (Only if you close the Lid, if you select "sleep" from the menu it wakes up immediately)
+
+### What doesn't work
+* Nvidia GT920M: Obviously this doesn't and will never work, since macOS doesn't support Nvidia Optimus.
+* I still have to test both Ethernet and the SD Card Reader.
 
 ## Getting started
 You should follow [RehabMan's great guide](https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/) to prepair your USB stick and install the OS. Huge thanks to RehabMan for his great job.
