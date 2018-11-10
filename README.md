@@ -43,10 +43,13 @@ After that, rebuilt the kext cache:
 If you prefer, instead of changing permissions and ownership + rebuilding the cache in the terminal, you can just run Kext Utility and enter your password, it will do everything for you (just wait for the "Quit" button to appear, it means that the process is complete).
 
 ## Specific components 
+All the kexts which I've installed in /library/Extensions can be found in the Kexts folder.
 ### Audio
 To get audio working, the best way is probably to use AppleALC (VoodooHDA works as well), or at least this is what I use.
 Install [Lilu] and [AppleALC] kexts and open your `config.plist` file in `/EFI/CLOVER` with Clover Configurator.
 In the `Devices` section set `Inject Audio` to 'No' and in `Properties` look for `#layout-id` in the properties keys, then remove the hash character ('#') from it.
+
+More info [here]: https://www.tonymacx86.com/threads/an-idiots-guide-to-lilu-and-its-plug-ins.260063/
 
 [Lilu]: https://github.com/acidanthera/Lilu
 [AppleALC]: https://github.com/acidanthera/AppleALC
@@ -56,9 +59,11 @@ Download the latest Kext from [Here](https://github.com/RehabMan/OS-X-ACPI-Batte
 More info [here](https://www.tonymacx86.com/threads/guide-how-to-patch-dsdt-for-working-battery-status.116102/).
 
 ### Display brightness control
+This fix requires Lilu.kext to be installed. You should already have it if you followed the Audio part.
 Download the latest zip file from [Here](https://bitbucket.org/RehabMan/applebacklightfixup/downloads/). Inside it you will find a kext and a file called "SSDT-PNLF.aml": you have to copy it to `EFI/CLOVER/ACPI/patched`, while you should already know what to do with the kext.
 
-NOTE: This with just allow you to change the brightness in Settings->Display, setting the keyboard shortcuts is a different story.
+NOTE: 
+This with just allow you to change the brightness in Settings->Display, setting the keyboard shortcuts is a different story.
 More info [here](https://www.tonymacx86.com/threads/guide-laptop-backlight-control-using-applebacklightfixup-kext.218222/).
 
 ### Keyboard and Touchpad
