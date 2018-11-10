@@ -99,6 +99,8 @@ RehabMan obviousty made a guide about it and you can find it [here](https://www.
 NOTE: On this Laptop the `_OFF` method is in the same SSDT as the `_INI` one (It should be SSDT8) and it doesn't access the `EC`, so everything should work just applying the `Disable from _INI (SSDT)` patch properly, way easier than the case in the guide.
 After patching the SSDT you should save it as .aml and put in `EFI/CLOVER/ACPI/patched`.
 
+To see if the Patch was succesful, go to `About This Mac -> System report -> Graphics/Displays`. If you find an NVIDIA device listed it means that something went wrong, while if you can only see the Intel HD520 IGPU, you're good to go.
+
 ### Power Management
 Read [this](https://www.tonymacx86.com/threads/guide-native-power-management-for-laptops.175801/) guide.
 
