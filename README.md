@@ -45,10 +45,12 @@ If you prefer, instead of changing permissions and ownership + rebuilding the ca
 ## Specific components 
 All the kexts which I've installed in /library/Extensions can be found in the Kexts folder.
 The only ones which are not covered by the little "guide" below are: `WhateverGreen.kext`, `FakeSMC.kext` and `USBInjectAll.kext`.
+
 ### Audio
 To get audio working, the best way is probably to use AppleALC (VoodooHDA works as well), or at least this is what I use.
 Install [Lilu] and [AppleALC] kexts and open your `config.plist` file in `/EFI/CLOVER` with Clover Configurator.
 In the `Devices` section set `Inject Audio` to 'No' and in `Properties` look for `#layout-id` in the properties keys, then remove the hash character ('#') from it.
+After that, install the [CodecCommander kext](https://bitbucket.org/RehabMan/os-x-eapd-codec-commander/downloads/).
 
 More info [here]: https://www.tonymacx86.com/threads/an-idiots-guide-to-lilu-and-its-plug-ins.260063/
 
