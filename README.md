@@ -44,7 +44,7 @@ If you prefer, instead of changing permissions and ownership + rebuilding the ca
 
 ## Specific components 
 All the kexts which I've installed in `/Library/Extensions` can be found in the Kexts folder.
-The only ones which are not covered by the little "guide" below are: `WhateverGreen.kext`, `FakeSMC.kext` (and its Plugins) and `USBInjectAll.kext`. You should install these too.
+The only ones which are not covered by the little "guide" below are: `WhateverGreen.kext`, `FakeSMC.kext` (and its Plugins) and `USBInjectAll.kext`. You should install those too.
 
 You can see my patcher SSDT and my config.plist as well, in the `CLOVER` folder.
 
