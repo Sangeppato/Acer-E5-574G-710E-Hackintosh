@@ -44,7 +44,7 @@ If you prefer, instead of changing permissions and ownership + rebuilding the ca
 ### Audio
 To get audio working, the best way is probably to use AppleALC (VoodooHDA works as well), or at least this is what I use.
 Install [Lilu] and [AppleALC] kexts and open your `config.plist` file in `/EFI/CLOVER` with Clover Configurator.
-In the "Devices" section set "Inject Audio" to 'No' and in "Properties" look for `#layout-id` in the properties keys, then remove the hash character ('#') from it.
+In the `Devices` section set `Inject Audio` to 'No' and in `Properties` look for `#layout-id` in the properties keys, then remove the hash character ('#') from it.
 
 [Lilu]: https://github.com/acidanthera/Lilu
 [AppleALC]: https://github.com/acidanthera/AppleALC
@@ -69,7 +69,12 @@ The best option should be to install VoodooI2C (see [here]), since the trackpad 
 
 ### Disabling the Nvidia GT920M
 Since macOS doesn't support Nvidia Optimus (actually, the only System which currently supports it properly is Windows), you will probably want to disable the Nvidia GPU in order to get a better battery life.
-RehabMan obviousty made a guide about it and you can find it [here](https://www.tonymacx86.com/threads/guide-disabling-discrete-graphics-in-dual-gpu-laptops.163772/).
+RehabMan obviousty made a guide about it and you can find it [here](https://www.tonymacx86.com/threads/guide-disabling-discrete-graphics-in-dual-gpu-laptops.163772/), but you should probably read [this one](https://www.tonymacx86.com/threads/guide-patching-laptop-dsdt-ssdts.152573/) first.
 
 NOTE: On this Laptop the `_OFF` method is in the same SSDT as the `_INI` one (It should be SSDT8) and it doesn't access the `EC`, so everything should work just applying the `Disable from _INI (SSDT)` patch properly, way easier than the case in the guide.
 After patching the SSDT you should save it as .aml and put in `EFI/CLOVER/ACPI/patched`.
+
+### Power Management
+Read [this](https://www.tonymacx86.com/threads/guide-native-power-management-for-laptops.175801/) guide.
+
+On my laptop everything was already set properly, so you should be good to go as well without any further change (My advice is to read the guide anyway).
