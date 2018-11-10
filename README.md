@@ -44,6 +44,7 @@ If you prefer, instead of changing permissions and ownership + rebuilding the ca
 
 ## Specific components 
 All the kexts which I've installed in /library/Extensions can be found in the Kexts folder.
+The only ones which are not covered by the little "guide" below are: `WhateverGreen.kext`, `FakeSMC.kext` and `USBInjectAll.kext`.
 ### Audio
 To get audio working, the best way is probably to use AppleALC (VoodooHDA works as well), or at least this is what I use.
 Install [Lilu] and [AppleALC] kexts and open your `config.plist` file in `/EFI/CLOVER` with Clover Configurator.
