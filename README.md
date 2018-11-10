@@ -14,6 +14,8 @@ The Laptop works fairly well with macOS Mojave 10.14.1, I still have to get the 
 You should follow [RehabMan's great guide](https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/) to prepair your USB stick and install the OS. Huge thanks to RehabMan for his great job.
 For the config.plist file, you should choose "config_HD515_520_530_540.plist".
 
+If you have any doubt or question, have a look [here](https://www.tonymacx86.com/threads/faq-read-first-laptop-frequent-questions.164990/).
+
 ### Software you will need
 * [Clover Configurator] (this is what I use, but you can just choose a plist editor)
 * [MaciASL](https://github.com/RehabMan/OS-X-MaciASL-patchmatic)
