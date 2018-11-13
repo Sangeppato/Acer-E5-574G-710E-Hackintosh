@@ -98,7 +98,7 @@ The best option should be to install VoodooI2C (see [here]), since the trackpad 
 Since macOS doesn't support Nvidia Optimus (actually, the only System which currently supports it properly is Windows), you will probably want to disable the Nvidia GPU in order to get a better battery life.
 RehabMan obviousty made a guide about it and you can find it [here](https://www.tonymacx86.com/threads/guide-disabling-discrete-graphics-in-dual-gpu-laptops.163772/), but you should probably read [this one](https://www.tonymacx86.com/threads/guide-patching-laptop-dsdt-ssdts.152573/) first.
 
-NOTE: On this Laptop the `_OFF` method is in the same SSDT as the `_INI` one (It should be SSDT8) and it doesn't access the `EC`, so everything should work just applying the `Disable from _INI (SSDT)` patch properly, way easier than the case in the guide.
+NOTE: On this Laptop the `_OFF` method is in the same SSDT as the `_INI` one (SSDT6 in my case) and it doesn't access the `EC`, so everything should work just applying the `Disable from _INI (SSDT)` patch properly, way easier than the case in the guide.
 After patching the SSDT you should save it as .aml and put in `EFI/CLOVER/ACPI/patched`.
 
 To see if the Patch was succesful, go to `About This Mac -> System report -> Graphics/Displays`. If you find an NVIDIA device listed it means that something went wrong, while if you can only see the Intel HD520 IGPU, you're good to go.
