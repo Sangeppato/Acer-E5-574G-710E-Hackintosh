@@ -14,13 +14,13 @@ The Laptop works fairly well with macOS Mojave 10.14.1, I still have to get the 
 * Battery indicator
 * Keyboard (Even the FN keys)
 * Touchapd 
-* HDMI, even with the GT920M disabled
 * Audio
 * Suspension (Only if you close the Lid, if you select "sleep" from the menu it wakes up immediately)
 
 ### What doesn't work
-* Nvidia GT920M: Obviously this doesn't and will never work, since macOS doesn't support Nvidia Optimus.
-* I still have to test both Ethernet and the SD Card Reader.
+* Nvidia GT920M: Obviously this doesn't and will never work, since macOS doesn't support Nvidia Optimus
+* SD Card Reader
+* HDMI output gives problem
 
 ## Getting started
 You should follow [RehabMan's great guide](https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/) to prepair your USB stick and install the OS. Huge thanks to RehabMan for his great job.
